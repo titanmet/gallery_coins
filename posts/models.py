@@ -168,6 +168,8 @@ class Post(models.Model):
         for rubli in rub:
             total_count += rub[rubli]['count']
 
+        cv2.imwrite("coins_amount.jpg", coins_circled)
+
         return total_count
 
     def size_image(self):
