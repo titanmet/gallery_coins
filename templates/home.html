@@ -1,0 +1,16 @@
+<!-- templates/home.html -->
+<h1>Image coins uploading</h1>
+<ul>
+  {% for post in object_list %}
+    <h2>{{ post.title }}</h2>
+    <img src="{{ post.cover.url }}" alt="{{ post.title }}" width="300" height="400">
+  <h3>Size image : {{ post.size_image }}</h3>
+  <h3>Average color RGB : {{ post.avr_rgb }}</h3>
+   <svg width="100" height="50">
+   <rect width="100" height="50" style="fill:rgb{{ post.avr_rgb }}" />
+ </svg>
+  <h3>The total amount is {{ post.calculate_amount }} RUB</h3>
+  <h3>The total count is {{ post.calculate_coins }} coins</h3>
+  {% endfor %}
+    <p><a href="/post">Add</a></p>
+</ul>
