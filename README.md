@@ -1,1 +1,1 @@
-Testovoe dly ИП Полупокерова Саши and maloletnix dolboebov ))) 
+django gallery money
